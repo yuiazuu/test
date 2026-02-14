@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <meta name="description" content="A special Valentine's Day message just for you.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- SVG Heart Mask for Smooth Edges -->
+    <svg width="0" height="0" style="position: absolute;">
+        <defs>
+            <clipPath id="heart-mask" clipPathUnits="objectBoundingBox">
+                <path
+                    d="M0.5,0.9 C0.5,0.9 0,0.6 0,0.35 C0,0.15 0.15,0 0.35,0 C0.45,0 0.5,0.1 0.5,0.1 C0.5,0.1 0.55,0 0.65,0 C0.85,0 1,0.15 1,0.35 C1,0.6 0.5,0.9 0.5,0.9 Z" />
+            </clipPath>
+        </defs>
+    </svg>
+
+    <!-- Pitch-Black Paper Reveal Overlay -->
+    <div id="intro-overlay">
+        <div class="intro-content">
+            <p class="headset-note">wear headset for better experience 🎧</p>
+            <button id="start-btn">click me</button>
+        </div>
+    </div>
+
+    <!-- Rest of the Website (Initially Hidden) -->
+    <div id="main-content" style="opacity: 0; pointer-events: none;">
+        <div id="heart-container"></div>
+        <div id="flower-container"></div>
+
+        <div class="container">
+            <div class="heart-glow"></div>
+
+            <!-- SVG-Based Designer Heart (Fixes Jagged Edge Bugs) -->
+            <div id="card-wrapper">
+                <svg class="designer-heart" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet">
+                    <!-- The Glow (Integrated into SVG to prevent clipping) -->
+                    <defs>
+                        <radialGradient id="inner-glow" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" style="stop-color:rgba(255, 255, 255, 0.4); stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:rgba(255, 255, 255, 0); stop-opacity:1" />
+                        </radialGradient>
+                    </defs>
+
+                    <!-- Shadow/Glow Background -->
+                    <path class="heart-path blur-shadow"
+                        d="M50,88.4 C50,88.4 10,61.4 10,38.4 C10,21.4 23,11.4 35,11.4 C43,11.4 50,18.4 50,18.4 C50,18.4 57,11.4 65,11.4 C77,11.4 90,21.4 90,38.4 C90,61.4 50,88.4 50,88.4 Z" />
+
+                    <!-- The Main Glass Heart -->
+                    <path id="glass-heart" class="heart-path piece-of-glass"
+                        d="M50,88.4 C50,88.4 10,61.4 10,38.4 C10,21.4 23,11.4 35,11.4 C43,11.4 50,18.4 50,18.4 C50,18.4 57,11.4 65,11.4 C77,11.4 90,21.4 90,38.4 C90,61.4 50,88.4 50,88.4 Z" />
+
+                    <!-- Decorative Double Border (Gold/Rose Gold Frame) -->
+                    <path class="heart-path frame-inner"
+                        d="M50,86.4 C50,86.4 12,60.4 12,38.4 C12,23.4 24,13.4 35,13.4 C42,13.4 50,19.4 50,19.4 C50,19.4 58,13.4 65,13.4 C76,13.4 88,23.4 88,38.4 C88,60.4 50,86.4 50,86.4 Z" />
+                    <path class="heart-path frame-outer"
+                        d="M50,89.4 C50,89.4 9,62.4 9,38.4 C9,20.4 22,10.4 35,10.4 C44,10.4 50,17.4 50,17.4 C50,17.4 56,10.4 65,10.4 C78,10.4 91,20.4 91,38.4 C91,62.4 50,89.4 50,89.4 Z" />
+                </svg>
+
+                <div class="heart-content">
+                    <h1 id="title">Para sa cute x pretty kong bebe</h1>
+                    <div id="letter-content">
+                        <p>Happy Valentine’s Day, loveeee!</p>
+                        <p>Thank you love sa tanaaan, sa malipayon na adlaw HAHHAHA mali kaarogan mag bagaw, sa ups and
+                            downs
+                            basta iton kay wara ak maisip HAHAHAHHA pero dre man ibigsabihin na di ko na ikaw lab :&lt;
+                        </p>
+                        <p>Salamat kasi kahit may times na nauuyam ka… tapos uyam na uyam ka na saak ura ura ada ka la
+                            gihap.
+                            biskan makulit ak ewan ko kun ungod, kahit minsan nangungudyot a na HAHAHAHA wa ka mahimo
+                            ldr
+                            AHAHHAHAHA, tiniis mo pa rin ako.</p>
+                        <p>Promise babawi ako pag malapit na meeee... For now, ito muna appreciation para sa favorite |
+                            maganda
+                            | sexy | pretty | cute kong bebe... wag ka na overthink sa looks mo. angaduh mo kayaaaa need
+                            mo lang
+                            maging proud sa sarili moooo wag na yuko</p>
+                        <p><strong>I love youuu alwayssss muah muah</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+        <source src="music.m4a" type="audio/x-m4a">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
