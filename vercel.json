@@ -1,10 +1,4 @@
 {
   "version": 2,
-  "name": "valentines-gift",
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    }
-  ]
+  "name": "valentines-gift"
 }
