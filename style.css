@@ -13,7 +13,7 @@
 
 body {
     font-family: 'Outfit', sans-serif;
-    background-color: #ffe5ec;
+    background-color: #ffe5ec !important;
     background-image: url('background.jpg');
     background-size: cover;
     background-position: center;
